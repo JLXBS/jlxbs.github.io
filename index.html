@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div>
+            <div class="candiv" onmousedown="change_target(event)" onmousemove="change_target(event)">
+                <canvas id="canvas" width="1400" height="500"></canvas>
+            </div>
+            <div class="vardiv">
+                <div>
+                    <div class="ballvar">
+                        <p></p>
+                        <p style="display: inline;">x<sub>ball</sub>:<div id="x_ball" style="display: inline;"></div> px</p>
+                        <p style="display: inline;">v<sub>ball</sub>:<div id="v_ball" style="display: inline;"></div> px/s</p>
+                    </div>
+                    <div class="ballbutton">
+                        <div class="ballstop" id="stop_button" onmousedown="stop_move()">
+                            <p id="stop_text">Stop</p>
+                        </div>
+                        <div class="ballreset" id="reset_button" onmousedown="reset1()" onmouseup="reset2()">
+                            <p id="reset">RESET</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="PIDcontrol">
+                    <div style="float: left;">
+                        <div class="KPID" onmousedown="KP_clear()"><p>K<sub>P</sub>:</p><div id="K_P" style="display: inline;"></div>*10<sup>-2</sup></div>
+                        <div class="KPID" onmousedown="KI_clear()"><p>K<sub>I</sub>:</p><div id="K_I" style="display: inline;"></div>*10<sup>-3</sup></div>
+                        <div class="KPID" onmousedown="KD_clear()"><p>K<sub>D</sub>:</p><div id="K_D" style="display: inline;"></div>*10<sup>+1</sup></div>
+                    </div>
+                    <div style="display: left;">
+                        <div class="changePID">
+                            <div class="PIDbutton" onmousedown="K_Psss()">-1</div>
+                            <div class="PIDbutton" onmousedown="K_Pss()">-0.1</div>
+                            <div class="PIDbutton" onmousedown="K_Ps()">-0.01</div>
+                            <div class="PIDbutton" onmousedown="K_Pp()">+0.01</div>
+                            <div class="PIDbutton" onmousedown="K_Ppp()">+0.1</div>
+                            <div class="PIDbutton" onmousedown="K_Pppp()">+1</div>
+                        </div>
+                        <div class="changePID">
+                            <div class="PIDbutton" onmousedown="K_Isss()">-1</div>
+                            <div class="PIDbutton" onmousedown="K_Iss()">-0.1</div>
+                            <div class="PIDbutton" onmousedown="K_Is()">-0.01</div>
+                            <div class="PIDbutton" onmousedown="K_Ip()">+0.01</div>
+                            <div class="PIDbutton" onmousedown="K_Ipp()">+0.1</div>
+                            <div class="PIDbutton" onmousedown="K_Ippp()">+1</div>
+                        </div>
+                        <div class="changePID">
+                            <div class="PIDbutton" onmousedown="K_Dsss()">-1</div>
+                            <div class="PIDbutton" onmousedown="K_Dss()">-0.1</div>
+                            <div class="PIDbutton" onmousedown="K_Ds()">-0.01</div>
+                            <div class="PIDbutton" onmousedown="K_Dp()">+0.01</div>
+                            <div class="PIDbutton" onmousedown="K_Dpp()">+0.1</div>
+                            <div class="PIDbutton" onmousedown="K_Dppp()">+1</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sigde">
+                    <div>
+                        <div class="ballg" onmousedown="g_clear()">
+                            <p style="display: inline;">g:<div id="ball_g" style="display: inline;"></div> px/s<sup>2</sup></p>
+                        </div>
+                        <input id="range" value="0" type="range" min="-50" max="50" step="0.01" class="gin">
+                        <div class="sige" onmousedown="sige_clear()">
+                            <p style="display: inline;">&int;e(t):<div id="sig_e" style="display: inline;"></div> px&middot;s</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="logo" style="display: left;position: relative;top: -100px;">
+                    <img src="JLXBS.jpg" width="255px" style="position: relative; top:20px; left: 25px; float: left;"/>
+                </div>
+            </div>
+        </div>
+        <script src="main.js" defer></script>
+    </body>
+</html>

@@ -1,0 +1,168 @@
+html,body {
+    padding: 0px;
+    margin: 0px;
+    background: #ffffff;
+    font-weight: 100;
+    font-family: STXingkai, 'Karla', sans-serif;
+    color: #ffffff;
+    height: 100%;
+    overflow: hidden;
+}
+
+.candiv {
+    height: 500px;
+    width: 1400px;
+    border: 10px ridge #9b59ff;
+    background-color: rgba(0, 149, 255, 0);
+    
+    margin:auto;
+}
+
+.candiv canvas {
+    width: 1400px;
+    height: 500px;
+    stroke: #0c0;
+}
+
+.vardiv {
+    height: 200px;
+    width: 1400px;
+    border: 10px ridge #9b59ff;
+    background-color: #ffffff;
+    color: black;
+    font-family: consolas;
+    font-size: 20px;
+    margin: auto;
+    user-select: none;
+}
+
+.ballvar {
+    height: 90px;
+    width: 240px;
+    background-color: #ffffff;
+    color: black;
+    font-family: consolas;
+    font-size: 24px;
+    line-height: 4px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    float: left;
+    text-align: center;
+
+    border: 5px solid #cc0;
+}
+.ballbutton {
+    height: 100px;
+    width: 250px;
+
+    color: black;
+    font-family: consolas;
+    font-size: 28px;
+    text-align: center;
+}
+.ballreset {
+    height: 90px;
+    width: 115px;
+    border: 5px solid #c00;
+    float: left;
+}
+.ballstop {
+    height: 90px;
+    width: 115px;
+    border: 5px solid #c00;
+    float: left;
+}
+
+.PIDcontrol {
+    height: 200px;
+    width: 615px;
+    float: left;
+    background-color: #fff59e;
+    color: black;
+    font-family: consolas;
+    font-size: 24px;
+
+    position: relative;
+    top: -100px;
+}
+
+.KPID {
+    height: 40px;
+    width: 190px;
+    position: relative;
+    top: 10px;
+    left: 20px;
+    color: #fff;
+    border: 10px inset rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
+    text-align: left;
+    line-height: 25px;
+}
+.KPID p{
+    width: 100px;
+    display: inline;
+}
+
+.changePID {
+    height: 60px;
+    width: 360px;
+    float: left;
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+.PIDbutton {
+    height: 40px;
+    width: 40px;
+    border: 10px outset #ccc;
+    background-color: #eee;
+    float: left;
+    position: relative;
+    
+    color: black;
+    font-family: consolas;
+    font-size: 14px;
+    
+    text-align: center;
+    line-height: 40px;
+}
+
+.sigde {
+    height: 200px;
+    width: 230px;
+    background-color: #ffea2f;
+    float: left;
+    position: relative;
+    top: -100px;
+}
+.ballg {
+    height: 40px;
+    width: 190px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    color: #000000;
+    border: 10px inset rgba(255, 89, 0, 0.5);
+    background-color: rgba(255, 89, 0, 0.75);
+    text-align: left;
+    line-height: 25px;
+}
+.gin {
+    width: 200px;
+    position: relative;
+    top: 30px;
+    left: 10px;
+}
+.sige {
+    height: 40px;
+    width: 190px;
+    position: relative;
+    top: 50px;
+    left: 10px;
+    color: #000000;
+    border: 10px inset rgba(255, 89, 0, 0.5);
+    background-color: rgba(255, 89, 0, 0.75);
+    text-align: left;
+    line-height: 40px;
+}
